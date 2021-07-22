@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.com.phaneronsoft.flickergallery.presentation.view.activity.MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"
+        android:minWidth="200dp"
+        android:minHeight="200dp"
+        android:src="@drawable/ic_image_outline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_16"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewPhoto"
+        tools:text="Title" />
+
+    <ImageView
+        android:id="@+id/imageViewPrevious"
+        android:layout_width="@dimen/icon_72"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:paddingStart="@dimen/spacing_4"
+        android:paddingEnd="@dimen/spacing_24"
+        android:src="@drawable/ic_chevron_left"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewPhoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageViewPhoto"
+        app:tint="@color/colorAccent" />
+
+    <ImageView
+        android:id="@+id/imageViewNext"
+        android:layout_width="@dimen/icon_72"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:paddingStart="@dimen/spacing_24"
+        android:paddingEnd="@dimen/spacing_4"
+        android:src="@drawable/ic_chevron_right"
+        app:layout_constraintBottom_toBottomOf="@id/imageViewPhoto"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imageViewPhoto"
+        app:tint="@color/colorAccent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
